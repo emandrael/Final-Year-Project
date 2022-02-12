@@ -19358,7 +19358,7 @@ GameObject:
   - component: {fileID: 2005131935}
   - component: {fileID: 2005131934}
   m_Layer: 5
-  m_Name: Label
+  m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
