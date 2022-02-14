@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93889348eff234de0b6fcce6fda329d3, type: 3}
   m_Name: Workout Name
   m_EditorClassIdentifier: 
-  workoutName: Weird Workout IDK
-  exercises:
-  - exerciseName: Eyes Ups
-    sets: []
-  - exerciseName: Pushups
-    sets: []
-  - exerciseName: Pull Ups
-    sets: []
+  _WorkoutName: 
+  _Exercises:
+  - _ExerciseName: Legs
+    _ExerciseType: 0
+    _Sets: []
