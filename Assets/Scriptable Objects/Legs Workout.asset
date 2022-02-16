@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93889348eff234de0b6fcce6fda329d3, type: 3}
-  m_Name: Workout Name
+  m_Name: Legs Workout
   m_EditorClassIdentifier: 
-  _WorkoutName: 
+  _WorkoutName: Legs Workout
   _Exercises:
-  - _ExerciseName: Legs
+  - _ExerciseName: 1
+    _BodyPart: 0
     _ExerciseType: 0
-    _Sets: []
+    _WarmUpRestTimer: 0
+    _RealRestTimer: 0
+    Sets: []

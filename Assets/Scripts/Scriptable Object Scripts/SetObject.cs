@@ -1,6 +1,14 @@
 
-namespace WorkoutEngine
+namespace Scriptable_Object_Scripts
 {
+
+
+    public enum SetType
+    {
+        WarmUp,
+        Real
+    }
+    
     [System.Serializable]
     public class SetObject
     {
