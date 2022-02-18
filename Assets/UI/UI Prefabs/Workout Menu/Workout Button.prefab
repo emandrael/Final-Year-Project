@@ -292,13 +292,45 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
   Behaviours:
-    Behaviours: []
+    Behaviours:
+    - Enabled: 1
+      EventName: PointerDown
+      Runners: []
+      Event:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 812301403}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      BehaviourName: 2
+      Receiver:
+        ConnectionMode: 1
+        SignalProviderId:
+          Type: 0
+          Category: Pointer
+          Name: Down
+        ProviderReference: {fileID: 0}
+        StreamId:
+          Category: None
+          Name: None
+          Custom: 0
+      Cooldown: 0
+      Selectable: {fileID: 166560583827648098}
     SignalSource: {fileID: 166560583827648105}
     Selectable: {fileID: 166560583827648098}
   Id:
-    Category: None
-    Name: None
-    Custom: 0
+    Category: WorkoutDatabase
+    Name: WorkoutDetail
+    Custom: 1
 --- !u!222 &166560583827648099
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2145,3 +2177,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _UIButton: {fileID: 0}
   _Workout: {fileID: 0}
+  _Label: {fileID: 0}
