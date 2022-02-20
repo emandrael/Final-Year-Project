@@ -23,11 +23,7 @@ namespace Workout_Database_Scripts
         {
             _Workout = workout;
             gameObject.name = workout._WorkoutName;
-            _Label.text = workout._WorkoutName;
-
+            _Label.SetText( workout._WorkoutName);
         }
-    
-    
-    
     }
 }

@@ -22,6 +22,11 @@ namespace Workout_Database_Scripts
             }
         }
 
+        public void ValueChange(Vector2 vector2)
+        {
+            Debug.Log(vector2);
+        }
+
         // Update is called once per frame
         void Update()
         {
