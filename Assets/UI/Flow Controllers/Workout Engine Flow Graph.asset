@@ -93,7 +93,7 @@ MonoBehaviour:
   RunUpdate: 0
   RunFixedUpdate: 0
   RunLateUpdate: 0
-  NodeState: 0
+  NodeState: 2
   CanBeDeleted: 1
   Passthrough: 1
   ClearGraphHistory: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: -6695824481131073668}
   - {fileID: 4767699091017176518}
   RootNode: {fileID: 5704030696048125975}
-  ActiveNode: {fileID: 7627827313692964095}
+  ActiveNode: {fileID: -951793966969421294}
 --- !u!114 &4767699091017176518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
     Capacity: 1
     Connections:
     - 4d79575d-eb8b-4334-9c2f-81fa99a015c7
-    Value: '{"CanGoBack":false}'
+    Value: '{"CanGoBack":true}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.GoBackInputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     CanBeDeleted: 0
@@ -186,16 +186,31 @@ MonoBehaviour:
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 934.69257, y: -217.50005}
+  Position: {x: 980.48773, y: 47.999996}
   OnEnterShowViews:
   - Id:
-      Category: PopUp
-      Name: OpenWorkout
-      Custom: 1
-    Mode: 0
+      Category: Blackout
+      Name: Background
+      Custom: 0
+    Mode: 1
+  - Id:
+      Category: WorkoutsMenu
+      Name: WorkoutPopUp
+      Custom: 0
+    Mode: 1
   OnEnterHideViews: []
   OnExitShowViews: []
-  OnExitHideViews: []
+  OnExitHideViews:
+  - Id:
+      Category: Blackout
+      Name: Background
+      Custom: 0
+    Mode: 1
+  - Id:
+      Category: WorkoutsMenu
+      Name: WorkoutPopUp
+      Custom: 0
+    Mode: 1
   OnEnterHideAllViews: 0
   OnExitHideAllViews: 0
 --- !u!114 &5668836559683995074
@@ -330,7 +345,7 @@ MonoBehaviour:
     Capacity: 0
     Connections:
     - f9e2201b-33ae-4290-9f66-ff723ffc0b5a
-    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"WorkoutDatabaseScreen","Name":"Exit","Custom":true},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
+    Value: '{"Trigger":2,"TimeDelay":3.0,"SignalPayload":{"StreamId":{"Category":"None","Name":"None","Custom":false},"SignalValueType":0,"IntegerValue":0,"BooleanValue":false,"FloatValue":0.0,"StringValue":"","ColorValue":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"Vector2Value":{"x":0.0,"y":0.0},"Vector3Value":{"x":0.0,"y":0.0,"z":0.0},"Vector4Value":{"x":0.0,"y":0.0,"z":0.0,"w":0.0}},"ButtonId":{"Category":"WorkoutDatabaseScreen","Name":"Exit","Custom":false},"ToggleId":{"Category":"None","Name":"None","Custom":false},"CommandToggle":2,"ViewId":{"Category":"None","Name":"None","Custom":false},"CommandShowHide":0}'
     ValueTypeQualifiedName: Doozy.Runtime.UIManager.Nodes.PortData.UIOutputPortData,
       DoozyRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     CanBeDeleted: 1
@@ -349,11 +364,11 @@ MonoBehaviour:
   RunUpdate: 0
   RunFixedUpdate: 0
   RunLateUpdate: 0
-  NodeState: 2
+  NodeState: 0
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 497.1795, y: -48}
+  Position: {x: 545.3, y: 0}
   OnEnterShowViews:
   - Id:
       Category: Menus

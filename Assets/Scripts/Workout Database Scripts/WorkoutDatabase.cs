@@ -1,21 +1,25 @@
 using Scriptable_Object_Scripts;
 using UnityEngine;
+using Doozy.Runtime.UIManager;
+using Doozy.Runtime.UIManager.Components;
 
 namespace Workout_Database_Scripts
 {
     public class WorkoutDatabase : MonoBehaviour
     {
-        [SerializeField] private WorkoutSO[] _AllWorkouts;
+        [SerializeField] private WorkoutSO[] AllWorkouts;
 
-        [SerializeField] private GameObject _WorkoutButton;
-        [SerializeField] private Transform _ButtonsParent;
+        [SerializeField] private GameObject WorkoutButtonPrefab;
+        [SerializeField] private Transform ButtonsParentTransform;
+
+        public WorkoutSO CurrentlyActiveWorkout;
 
         // Start is called before the first frame update
         void Start()
         {
-            foreach (var workout in _AllWorkouts)
+            foreach (var workout in AllWorkouts)
             {
-                GameObject newButton = Instantiate(_WorkoutButton,_ButtonsParent);
+                GameObject newButton = Instantiate(WorkoutButtonPrefab,ButtonsParentTransform);
                 WorkoutDatabaseButton button = newButton.GetComponent<WorkoutDatabaseButton>();
                 button._Workout = workout;
                 button.AssignWorkout(workout);
@@ -25,6 +29,11 @@ namespace Workout_Database_Scripts
         public void ValueChange(Vector2 vector2)
         {
             Debug.Log(vector2);
+        }
+
+        public void SelectWorkout(WorkoutSO workout)
+        {
+            CurrentlyActiveWorkout = workout;
         }
 
         // Update is called once per frame
