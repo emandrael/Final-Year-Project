@@ -1,45 +1,30 @@
+using System;
+using System.Collections.Generic;
 using Scriptable_Object_Scripts;
 using UnityEngine;
 using Doozy.Runtime.UIManager;
 using Doozy.Runtime.UIManager.Components;
+using SimpleSQL;
 
 namespace Workout_Database_Scripts
 {
     public class WorkoutDatabase : MonoBehaviour
     {
-        [SerializeField] private WorkoutSO[] AllWorkouts;
+        public WorkoutObject WorkoutObject;
+        [SerializeField] private SimpleSQLManager SQLManager;
 
-        [SerializeField] private GameObject WorkoutButtonPrefab;
-        [SerializeField] private Transform ButtonsParentTransform;
-
-        public WorkoutSO CurrentlyActiveWorkout;
-
-        // Start is called before the first frame update
-        void Start()
+        public void Start()
         {
-            foreach (var workout in AllWorkouts)
+            WorkoutObject = new WorkoutObject();
+            
+            string sql = "SELECT * FROM Exercises";
+
+            List<ExerciseObject> exerciseObjects = SQLManager.Query<ExerciseObject>(sql);
+            
+            foreach (ExerciseObject exercise in exerciseObjects)
             {
-                GameObject newButton = Instantiate(WorkoutButtonPrefab,ButtonsParentTransform);
-                WorkoutDatabaseButton button = newButton.GetComponent<WorkoutDatabaseButton>();
-                button._Workout = workout;
-                button.AssignWorkout(workout);
+                Debug.Log(exercise.BodyPart);
             }
-        }
-
-        public void ValueChange(Vector2 vector2)
-        {
-            Debug.Log(vector2);
-        }
-
-        public void SelectWorkout(WorkoutSO workout)
-        {
-            CurrentlyActiveWorkout = workout;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
         }
     }
 }

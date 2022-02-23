@@ -8,7 +8,6 @@ namespace Scriptable_Object_Scripts
 
     public class WorkoutSO : ScriptableObject
     {
-        public string _WorkoutName;
-        public ExerciseObject[] _Exercises;
+        public WorkoutObject workout;
     }
 }

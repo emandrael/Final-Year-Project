@@ -2143,8 +2143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9447abbedf4a0c45a27cf425dab49a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIButton: {fileID: 0}
-  _Workout: {fileID: 0}
+  _UIButton: {fileID: 166560583827648098}
+  _Workout: {fileID: 11400000, guid: fc99d605a32a44802808b7a48ae6bb2c, type: 2}
+  _WorkoutDatabase: {fileID: 0}
   _Label: {fileID: 0}
   OnWorkoutSelected:
     m_PersistentCalls:

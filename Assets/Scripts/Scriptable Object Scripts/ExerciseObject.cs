@@ -1,3 +1,5 @@
+using SimpleSQL;
+
 namespace Scriptable_Object_Scripts
 {
     public enum BodyPart
@@ -27,15 +29,26 @@ namespace Scriptable_Object_Scripts
         ThreeMin,
     }
 
-    [System.Serializable]
+    
     public class ExerciseObject
     {
-        public string _ExerciseName;
-        public BodyPart _BodyPart;
-        public ExerciseType _ExerciseType;
-        public RestTimer _WarmUpRestTimer;
-        public RestTimer _RealRestTimer;
-        public SetObject[] Sets;
+        [PrimaryKey,NotNull]
+        public int ExerciseID { get; set; }
+        
+        [PrimaryKey,NotNull]
+        public string ExerciseName{ get; set; }
+        
+        [NotNull]
+        public BodyPart BodyPart{ get; set; }
+        
+        [NotNull]
+        public ExerciseType ExerciseType{ get; set; }
+        
+        [NotNull]
+        public RestTimer WarmUpRestTimer{ get; set; }
+        
+        [NotNull]
+        public RestTimer RealRestTimer{ get; set; }
     }
 }
 
