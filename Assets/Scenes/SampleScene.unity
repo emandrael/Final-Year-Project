@@ -2610,7 +2610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2767, y: 0}
+  m_AnchoredPosition: {x: -1885, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &410146315
@@ -6771,7 +6771,7 @@ MonoBehaviour:
   Id:
     Category: WorkoutDatabaseScreen
     Name: Exit
-    Custom: 0
+    Custom: 1
 --- !u!1 &858461116
 GameObject:
   m_ObjectHideFlags: 0
@@ -9845,7 +9845,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Workout Button
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 812301403, guid: 17ba809a8ddaf0543ace1cbbc5ddb48b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17ba809a8ddaf0543ace1cbbc5ddb48b, type: 3}
 --- !u!1 &1614093981
 GameObject:
@@ -11871,13 +11872,13 @@ MonoBehaviour:
   m_Script: {fileID: 1705125264, guid: 8382d7f8352b70544aa11f6729f875f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  databaseFile: {fileID: 4900000, guid: 9dcb9196be4a24aa4a7f49242476488a, type: 3}
+  databaseFile: {fileID: 4900000, guid: 975083825b6f94f87b7b803b5b0de058, type: 3}
   overrideBasePath: 
   overridePathMode: 0
   changeWorkingName: 0
   workingName: Database.sqlite
   overwriteIfExists: 0
-  debugTrace: 0
+  debugTrace: 1
 --- !u!4 &1622250011
 Transform:
   m_ObjectHideFlags: 0

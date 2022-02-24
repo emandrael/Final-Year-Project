@@ -32,10 +32,10 @@ namespace Scriptable_Object_Scripts
     
     public class ExerciseObject
     {
-        [PrimaryKey,NotNull]
+        [NotNull]
         public int ExerciseID { get; set; }
         
-        [PrimaryKey,NotNull]
+        [NotNull]
         public string ExerciseName{ get; set; }
         
         [NotNull]

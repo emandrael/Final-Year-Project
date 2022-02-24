@@ -15,16 +15,7 @@ namespace Workout_Database_Scripts
 
         public void Start()
         {
-            WorkoutObject = new WorkoutObject();
-            
-            string sql = "SELECT * FROM Exercises";
-
-            List<ExerciseObject> exerciseObjects = SQLManager.Query<ExerciseObject>(sql);
-            
-            foreach (ExerciseObject exercise in exerciseObjects)
-            {
-                Debug.Log(exercise.BodyPart);
-            }
+    
         }
     }
 }

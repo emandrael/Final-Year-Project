@@ -8,8 +8,5 @@ using Doozy.Runtime.UIManager.Components;
 using System;
 namespace Workout_Database_Scripts
 {
-    public class WorkoutDatabaseButton : MonoBehaviour
-    {
-        
-    }
+    
 }
