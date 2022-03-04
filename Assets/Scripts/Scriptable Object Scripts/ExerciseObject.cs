@@ -1,3 +1,4 @@
+using System;
 using SimpleSQL;
 
 namespace Scriptable_Object_Scripts
@@ -20,35 +21,23 @@ namespace Scriptable_Object_Scripts
         AssistedBodyWeight,
         RepsOnly
     }
-
-    public enum RestTimer
-    {
-        Null,
-        OneMin,
-        TwoMin,
-        ThreeMin,
-    }
-
     
+    [Serializable]
     public class ExerciseObject
     {
-        [NotNull]
-        public int ExerciseID { get; set; }
+        public int _ExerciseID;
+        public string _ExerciseName;
         
-        [NotNull]
-        public string ExerciseName{ get; set; }
+        public BodyPart _BodyPart;
         
-        [NotNull]
-        public BodyPart BodyPart{ get; set; }
+        public ExerciseType _ExerciseType;
         
-        [NotNull]
-        public ExerciseType ExerciseType{ get; set; }
+        public int _WarmUpRestTimer;
         
-        [NotNull]
-        public RestTimer WarmUpRestTimer{ get; set; }
-        
-        [NotNull]
-        public RestTimer RealRestTimer{ get; set; }
+        public int _RealRestTimer;
+
+        public SetObject[] sets;
+
     }
 }
 

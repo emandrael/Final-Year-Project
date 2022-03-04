@@ -10,12 +10,21 @@ namespace Workout_Database_Scripts
 {
     public class WorkoutDatabase : MonoBehaviour
     {
-        public WorkoutObject WorkoutObject;
+        public WorkoutSO WorkoutSO;
         [SerializeField] private SimpleSQLManager SQLManager;
 
         public void Start()
         {
-    
+            //WorkoutSO.InsertWorkoutHistory(SQLManager);
+
+            string sql = "SELECT * FROM History";
+
+            List<History> histories = SQLManager.Query<History>(sql);
+            
+            foreach (History set in histories)
+            {
+                Debug.Log(set.ExerciseName);
+            }
         }
     }
 }

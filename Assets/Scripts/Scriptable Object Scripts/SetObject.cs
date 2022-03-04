@@ -12,7 +12,8 @@ namespace Scriptable_Object_Scripts
     [System.Serializable]
     public class SetObject
     {
-        public float _Value;
+        public SetType _SetType;
+        public float _Weight;
         public int _Reps;
     }
 }

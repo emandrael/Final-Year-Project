@@ -10,7 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93889348eff234de0b6fcce6fda329d3, type: 3}
-  m_Name: Push Workout
+  m_Name: E
   m_EditorClassIdentifier: 
-  _WorkoutName: Push Workout
-  _Exercises: []
+  workout:
+    _WorkoutName: E
+    _Exercises:
+    - _ExerciseID: 0
+      _ExerciseName: 
+      _BodyPart: 0
+      _ExerciseType: 0
+      _WarmUpRestTimer: 0
+      _RealRestTimer: 0
+      sets: []
+    - _ExerciseID: 0
+      _ExerciseName: 
+      _BodyPart: 0
+      _ExerciseType: 0
+      _WarmUpRestTimer: 0
+      _RealRestTimer: 0
+      sets: []

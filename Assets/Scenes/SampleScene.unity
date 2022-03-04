@@ -573,8 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f6db22f8c9fdc4bac565bb95d68d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorkoutObject:
-    _WorkoutName: 
+  WorkoutSO: {fileID: 11400000, guid: 9d5976c5271de3c44b9712cf4a20e358, type: 2}
   SQLManager: {fileID: 1622250010}
 --- !u!1 &363790906
 GameObject:
@@ -3225,7 +3224,7 @@ MonoBehaviour:
   Id:
     Category: Blackout
     Name: Background
-    Custom: 1
+    Custom: 0
 --- !u!114 &410146317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6771,7 +6770,7 @@ MonoBehaviour:
   Id:
     Category: WorkoutDatabaseScreen
     Name: Exit
-    Custom: 1
+    Custom: 0
 --- !u!1 &858461116
 GameObject:
   m_ObjectHideFlags: 0
@@ -7428,7 +7427,7 @@ MonoBehaviour:
   Id:
     Category: Menus
     Name: WorkoutDatabase
-    Custom: 1
+    Custom: 0
 --- !u!114 &858461120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11854,7 +11853,7 @@ GameObject:
   - component: {fileID: 1622250011}
   - component: {fileID: 1622250010}
   m_Layer: 0
-  m_Name: DB Manager
+  m_Name: History Database
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
