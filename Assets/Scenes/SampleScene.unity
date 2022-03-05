@@ -123,6 +123,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4379000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4379001}
+  - component: {fileID: 4379002}
+  m_Layer: 5
+  m_Name: DatabaseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4379001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4379000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858461117}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4379002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4379000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f6db22f8c9fdc4bac565bb95d68d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _WorkoutDatabase: {fileID: 11400000, guid: e21aa25af0b7e304690fadd56f6c77f4, type: 2}
+  _SqlManager: {fileID: 1622250010}
+  _ButtonPrefab: {fileID: 900551090}
+  _ScrollView: {fileID: 1477787586}
 --- !u!1 &6496314
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +504,6 @@ GameObject:
   - component: {fileID: 60950471}
   - component: {fileID: 60950470}
   - component: {fileID: 60950469}
-  - component: {fileID: 60950472}
   m_Layer: 0
   m_Name: Workout Grid
   m_TagString: Untagged
@@ -473,7 +525,7 @@ RectTransform:
   m_Children:
   - {fileID: 1477787586}
   m_Father: {fileID: 858461117}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.074}
   m_AnchorMax: {x: 1, y: 0.77000004}
@@ -561,20 +613,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
---- !u!114 &60950472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60950466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08f6db22f8c9fdc4bac565bb95d68d9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WorkoutSO: {fileID: 11400000, guid: 9d5976c5271de3c44b9712cf4a20e358, type: 2}
-  SQLManager: {fileID: 1622250010}
 --- !u!1 &363790906
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,7 +6695,7 @@ RectTransform:
   m_Children:
   - {fileID: 999139135}
   m_Father: {fileID: 858461117}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8696297, y: 0.92312497}
   m_AnchorMax: {x: 0.989, y: 0.98447925}
@@ -6804,6 +6842,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4379001}
   - {fileID: 1799277071}
   - {fileID: 854535236}
   - {fileID: 60950467}
@@ -9364,6 +9403,26 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &900551082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 166560583827648105, guid: 17ba809a8ddaf0543ace1cbbc5ddb48b, type: 3}
+  m_PrefabInstance: {fileID: 1593172120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &900551090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900551082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9447abbedf4a0c45a27cf425dab49a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ButtonWorkoutObject:
+    _WorkoutName: 
+    _Exercises: []
 --- !u!1 &999139134
 GameObject:
   m_ObjectHideFlags: 0
@@ -9747,7 +9806,7 @@ PrefabInstance:
     - target: {fileID: 812301403, guid: 17ba809a8ddaf0543ace1cbbc5ddb48b, type: 3}
       propertyPath: _WorkoutDatabase
       value: 
-      objectReference: {fileID: 60950472}
+      objectReference: {fileID: 0}
     - target: {fileID: 812301403, guid: 17ba809a8ddaf0543ace1cbbc5ddb48b, type: 3}
       propertyPath: OnWorkoutSelected.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -9755,7 +9814,7 @@ PrefabInstance:
     - target: {fileID: 812301403, guid: 17ba809a8ddaf0543ace1cbbc5ddb48b, type: 3}
       propertyPath: OnWorkoutSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 60950472}
+      objectReference: {fileID: 0}
     - target: {fileID: 166560583827648104, guid: 17ba809a8ddaf0543ace1cbbc5ddb48b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -11999,7 +12058,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 858461117}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

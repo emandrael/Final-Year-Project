@@ -93,7 +93,7 @@ MonoBehaviour:
   RunUpdate: 0
   RunFixedUpdate: 0
   RunLateUpdate: 0
-  NodeState: 2
+  NodeState: 0
   CanBeDeleted: 1
   Passthrough: 1
   ClearGraphHistory: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: -6695824481131073668}
   - {fileID: 4767699091017176518}
   RootNode: {fileID: 5704030696048125975}
-  ActiveNode: {fileID: -951793966969421294}
+  ActiveNode: {fileID: 4767699091017176518}
 --- !u!114 &4767699091017176518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,11 +182,11 @@ MonoBehaviour:
   RunUpdate: 0
   RunFixedUpdate: 0
   RunLateUpdate: 0
-  NodeState: 0
+  NodeState: 2
   CanBeDeleted: 1
   Passthrough: 0
   ClearGraphHistory: 0
-  Position: {x: 980.49994, y: 48}
+  Position: {x: 978.7002, y: 47.999996}
   OnEnterShowViews:
   - Id:
       Category: Blackout

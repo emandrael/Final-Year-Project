@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 166560583827648109}
   - component: {fileID: 166560583827648110}
   - component: {fileID: 166560583827648111}
-  - component: {fileID: 812301403}
+  - component: {fileID: 900551090}
   m_Layer: 5
   m_Name: Workout Button
   m_TagString: Untagged
@@ -2131,7 +2131,7 @@ MonoBehaviour:
       ToCustomValue: 0
       FromOffset: 0
       ToOffset: 0.4
---- !u!114 &812301403
+--- !u!114 &900551090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2143,22 +2143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9447abbedf4a0c45a27cf425dab49a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UIButton: {fileID: 166560583827648098}
-  _Workout: {fileID: 11400000, guid: fc99d605a32a44802808b7a48ae6bb2c, type: 2}
-  _WorkoutDatabase: {fileID: 0}
-  _Label: {fileID: 0}
-  OnWorkoutSelected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Workout_Database_Scripts.WorkoutDatabase, Assembly-CSharp
-        m_MethodName: SelectWorkout
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  _ButtonWorkoutObject:
+    _WorkoutName: 
+    _Exercises: []

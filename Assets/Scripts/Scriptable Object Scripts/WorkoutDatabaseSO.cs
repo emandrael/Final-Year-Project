@@ -9,7 +9,7 @@ namespace Scriptable_Object_Scripts
     [CreateAssetMenu(fileName = "Workout Database Name", menuName = "Workforce/Workout Database", order = 2)]
     public class WorkoutDatabaseSO : ScriptableObject
     {
-        public List<WorkoutSO> Workouts;
+        public List<WorkoutObject> _Workouts;
     }
 }
 
