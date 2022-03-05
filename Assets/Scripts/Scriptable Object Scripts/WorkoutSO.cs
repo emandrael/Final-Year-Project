@@ -18,38 +18,36 @@ namespace Scriptable_Object_Scripts
 
         public void InsertWorkoutHistory(SimpleSQLManager manager)
         {
+            const string sql = "INSERT INTO History " +
+                               "(\"Date Time\", \"Workout Name\", \"Exercise Name\", \"Exercise Type\", \"Set Number\", \"Set Type\", \"Set Weight\", \"Set Repetitions\") " +
+                               "VALUES (?,?,?,?,?,?,?,?)";
             foreach (var exercise in workout._Exercises)
             {
-
-                for (int i = 0; i < exercise.sets.Length; i++)
+                for (int i = 0; i < exercise._Sets.Count; i++)
                 {
-                    History InsertValue = new History()
+                    SetDatabaseObject insertValue = new SetDatabaseObject()
                     {
                         DateTime = DateTime.Now.ToString("yyyy-MM-dd H:mm:ss"),
                         WorkoutName = workout._WorkoutName,
                         ExerciseName = exercise._ExerciseName,
                         ExerciseType = exercise._ExerciseType,
                         SetNumber = i + 1,
-                        SetType = exercise.sets[i]._SetType,
-                        SetWeight = exercise.sets[i]._Weight,
-                        SetRepetitions = exercise.sets[i]._Reps
+                        SetType = exercise._Sets[i]._SetType,
+                        SetWeight = exercise._Sets[i]._Weight,
+                        SetRepetitions = exercise._Sets[i]._Reps
                     };
                     
-                    string sql = "INSERT INTO History " +
-                                       "(\"Date Time\", \"Workout Name\", \"Exercise Name\", \"Exercise Type\", \"Set Number\", \"Set Type\", \"Set Weight\", \"Set Repetitions\") " +
-                                       "VALUES (?,?,?,?,?,?,?,?)";
-
                     manager.Execute
                     (
                         sql,
-                        InsertValue.DateTime,
-                        InsertValue.WorkoutName,
-                        InsertValue.ExerciseName,
-                        InsertValue.ExerciseType,
-                        InsertValue.SetNumber,
-                        InsertValue.SetType,
-                        InsertValue.SetWeight,
-                        InsertValue.SetRepetitions
+                        insertValue.DateTime,
+                        insertValue.WorkoutName,
+                        insertValue.ExerciseName,
+                        insertValue.ExerciseType,
+                        insertValue.SetNumber,
+                        insertValue.SetType,
+                        insertValue.SetWeight,
+                        insertValue.SetRepetitions
                     );
                 }
             }

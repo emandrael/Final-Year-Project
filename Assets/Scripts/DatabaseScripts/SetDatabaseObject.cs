@@ -5,7 +5,7 @@ using Scriptable_Object_Scripts;
 using UnityEngine;
 using SimpleSQL;
 
-public class History
+public class SetDatabaseObject
 {
     [PrimaryKey] public string DateTime { get; set; }
     [PrimaryKey] public string WorkoutName { get; set; }
