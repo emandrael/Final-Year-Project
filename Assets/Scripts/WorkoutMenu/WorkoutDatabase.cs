@@ -30,13 +30,15 @@ namespace WorkoutMenu
                 workoutButton.SetButton(workout._WorkoutName, workout);
             }
 
-            Debug.Log(_WorkoutDatabase[0].GetExerciseOrder());
+            var e = new ExerciseDatabaseObject(_WorkoutDatabase[0]._Exercises[0]);
+            
+            Debug.Log(e.Sets);
         }
 
 
         private List<WorkoutObject> GetWorkouts()
         {
-            var returnList = new List<WorkoutObject>();
+            var workouts = new List<WorkoutObject>();
             
             const string sql = "SELECT * FROM Workouts";
             
@@ -45,11 +47,12 @@ namespace WorkoutMenu
             foreach (var workout in databaseObjects)
             {
                 var workoutObject = new WorkoutObject(workout.WorkoutName, GetExercises(workout.WorkoutExercises));
-                returnList.Add(workoutObject);
+                workouts.Add(workoutObject);
             }
 
-            return returnList;
+            return workouts;
         }
+
 
         private ExerciseObject GetExerciseWithID(int exerciseID)
         {
@@ -64,15 +67,43 @@ namespace WorkoutMenu
                 databaseRecord.ExerciseType,
                 databaseRecord.WarmUpRestTimer,
                 databaseRecord.RealRestTimer,
-                new List<SetObject>()
+                databaseRecord.GetSets()
             );
+        }
+        
+        public List<SetObject> GetSetsFromString(string setExerciseHistory)
+        {
+            var sets = new List<SetObject>();
+            
+            var setsSplitString = setExerciseHistory.Split(";");
+
+            foreach (var set in setsSplitString)
+            {
+                var setSplitString = set.Split(",");
+
+                var setType = (SetType) int.Parse(setSplitString[0]);
+                var weight = float.Parse(setSplitString[1]);
+                var reps = int.Parse(setSplitString[2]);
+
+                sets.Add(new SetObject(setType,weight,reps));
+            }
+
+            return sets;
+
         }
 
         private List<ExerciseObject> GetExercises(string exerciseString)
         {
             var idListSplit = exerciseString.Split(",");
 
-            return idListSplit.Select(id => GetExerciseWithID(int.Parse(id))).ToList();
+            var exercises = new List<ExerciseObject>();
+
+            foreach (var id in idListSplit)
+            {
+                exercises.Add(GetExerciseWithID(int.Parse(id)));
+            }
+
+            return exercises;
         }
     }
 }

@@ -3,7 +3,7 @@ namespace Scriptable_Object_Scripts
 {
 
 
-    public enum SetType
+    public enum SetType : int
     {
         WarmUp,
         Real

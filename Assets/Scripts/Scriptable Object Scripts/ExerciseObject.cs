@@ -43,7 +43,7 @@ namespace Scriptable_Object_Scripts
             _ExerciseType = exerciseType;
             _WarmUpRestTimer = warmUpRestTimer;
             _RealRestTimer = realRestTimer;
-            _Sets = new List<SetObject>();
+            _Sets = setObjects;
         }
 
         public void AddSet(SetType setType, float weight, int reps)

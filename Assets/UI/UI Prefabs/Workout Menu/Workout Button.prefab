@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 166560583827648110}
   - component: {fileID: 166560583827648111}
   - component: {fileID: 900551090}
+  - component: {fileID: 254875697958205970}
   m_Layer: 5
   m_Name: Workout Button
   m_TagString: Untagged
@@ -2146,3 +2147,16 @@ MonoBehaviour:
   _ButtonWorkoutObject:
     _WorkoutName: 
     _Exercises: []
+--- !u!114 &254875697958205970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166560583827648105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4717023710394f84085f3545d246563f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTransform: {fileID: 166560583827648104}

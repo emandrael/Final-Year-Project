@@ -15,4 +15,6 @@ public class SetDatabaseObject
     [PrimaryKey] public int SetNumber { get; set; }
     public float SetWeight { get; set; }
     public int SetRepetitions { get; set; }
+    
+    
 }
