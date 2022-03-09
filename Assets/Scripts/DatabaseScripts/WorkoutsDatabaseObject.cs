@@ -5,8 +5,8 @@ namespace DatabaseScripts
 {
     public class WorkoutsDatabaseObject
     {
-        [PrimaryKey] public int WorkoutID { get; set; }
-        public string WorkoutName { get; set; }
+        [PrimaryKey, AutoIncrement] public int WorkoutID { get; set; }
+        [NotNull] public string WorkoutName { get; set; }
         public string WorkoutExercises { get; set; }
         
         public string LastWorkout { get; set; }

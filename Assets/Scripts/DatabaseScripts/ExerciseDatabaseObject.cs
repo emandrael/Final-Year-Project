@@ -54,6 +54,7 @@ namespace DatabaseScripts
 
             foreach (var set in setsSplitString)
             {
+                Debug.Log(set);
                 var setSplitString = set.Split(",");
                 var setType = (SetType) int.Parse(setSplitString[0]);
                 var weight = float.Parse(setSplitString[1]);

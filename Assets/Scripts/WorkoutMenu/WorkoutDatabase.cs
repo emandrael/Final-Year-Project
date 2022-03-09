@@ -44,6 +44,7 @@ namespace WorkoutMenu
             
             var databaseObjects = _SqlManager.Query<WorkoutsDatabaseObject>(sql);
             
+            
             foreach (var workout in databaseObjects)
             {
                 var workoutObject = new WorkoutObject(workout.WorkoutName, GetExercises(workout.WorkoutExercises));
@@ -94,6 +95,7 @@ namespace WorkoutMenu
 
         private List<ExerciseObject> GetExercises(string exerciseString)
         {
+            Debug.Log(exerciseString);
             var idListSplit = exerciseString.Split(",");
 
             var exercises = new List<ExerciseObject>();
