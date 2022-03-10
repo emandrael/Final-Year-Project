@@ -29,10 +29,6 @@ namespace WorkoutMenu
                 var workoutButton = Instantiate(_ButtonPrefab,_ScrollView);
                 workoutButton.SetButton(workout._WorkoutName, workout);
             }
-
-            var e = new ExerciseDatabaseObject(_WorkoutDatabase[0]._Exercises[0]);
-            
-            Debug.Log(e.Sets);
         }
 
 
@@ -95,7 +91,6 @@ namespace WorkoutMenu
 
         private List<ExerciseObject> GetExercises(string exerciseString)
         {
-            Debug.Log(exerciseString);
             var idListSplit = exerciseString.Split(",");
 
             var exercises = new List<ExerciseObject>();

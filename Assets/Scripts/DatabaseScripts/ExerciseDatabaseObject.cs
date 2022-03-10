@@ -38,8 +38,6 @@ namespace DatabaseScripts
 
             setString += (int) sets[^1]._SetType + "," + sets[^1]._Weight + "," +
                          sets[^1]._Reps;
-
-            Debug.Log(setString);
             
             Sets = setString;
 
@@ -54,7 +52,6 @@ namespace DatabaseScripts
 
             foreach (var set in setsSplitString)
             {
-                Debug.Log(set);
                 var setSplitString = set.Split(",");
                 var setType = (SetType) int.Parse(setSplitString[0]);
                 var weight = float.Parse(setSplitString[1]);
