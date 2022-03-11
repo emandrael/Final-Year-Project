@@ -4,6 +4,7 @@ using System.Linq;
 using DatabaseScripts;
 using Scriptable_Object_Scripts;
 using SimpleSQL;
+using TigerForge;
 using UnityEngine;
 
 namespace WorkoutMenu
@@ -17,6 +18,8 @@ namespace WorkoutMenu
         [SerializeField] private WorkoutDatabaseButton _ButtonPrefab;
 
         [SerializeField] private Transform _ScrollView;
+
+        [SerializeField] private WorkoutObject selectedWorkoutObject;
         
         
 
@@ -29,6 +32,13 @@ namespace WorkoutMenu
                 var workoutButton = Instantiate(_ButtonPrefab,_ScrollView);
                 workoutButton.SetButton(workout._WorkoutName, workout);
             }
+            
+            EventManager.StartListening("WORKOUT_MENU_POPUP",SetSelectedObject);
+        }
+
+        private void SetSelectedObject()
+        {
+            selectedWorkoutObject = (WorkoutObject) EventManager.GetData("WORKOUT_MENU_POPUP");
         }
 
 

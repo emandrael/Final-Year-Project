@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Doozy.Runtime.UIManager.Components;
+using Doozy.Runtime.UIManager.Input;
+using TigerForge;
 using TMPro;
 using UnityEngine;
 
@@ -21,5 +23,10 @@ public class WorkoutDatabaseButton : MonoBehaviour
         gameObject.name = buttonText;
         tmpText.text = buttonText;
         _ButtonWorkoutObject = workoutObject;
+    }
+
+    public void PopUpWorkoutSelect()
+    {
+        EventManager.EmitEventData("WORKOUT_MENU_POPUP",_ButtonWorkoutObject);
     }
 }
