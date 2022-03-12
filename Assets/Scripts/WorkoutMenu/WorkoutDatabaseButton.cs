@@ -28,5 +28,6 @@ public class WorkoutDatabaseButton : MonoBehaviour
     public void PopUpWorkoutSelect()
     {
         EventManager.EmitEventData("WORKOUT_MENU_POPUP",_ButtonWorkoutObject);
+        EventManager.EmitEvent("SCROLL_VIEW_RESET");
     }
 }
