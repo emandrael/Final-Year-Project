@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Scriptable_Object_Scripts;
-using UnityEngine;
 using SimpleSQL;
-
 public class SetDatabaseObject
 {
     [PrimaryKey] public string DateTime { get; set; }

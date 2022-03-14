@@ -54,6 +54,11 @@ namespace WorkoutMenu.WorkoutPopUpMenu
             _exerciseCards.Add(exerciseCard);
             exerciseCard.SetCard(exerciseObject);
         }
+
+        public void OnSelectWorkoutPressed()
+        {
+            EventManager.EmitEventData("SELECT_WORKOUT",_currentlyViewedWorkoutObject);
+        }
     
 
         // Update is called once per frame
