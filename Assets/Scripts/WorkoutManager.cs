@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TigerForge;
 using UnityEngine;
 
@@ -9,17 +7,11 @@ public class WorkoutManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.StartListening("SELECT_WORKOUT",SelectWorkout);
+        EventManager.StartListening(EventConstants.WORKOUT_SELECT,SelectWorkout);
     }
 
     private void SelectWorkout()
     {
-        currentWorkout = (WorkoutObject) EventManager.GetData("SELECT_WORKOUT");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log("Why Hello There");
+        currentWorkout = (WorkoutObject) EventManager.GetData(EventConstants.WORKOUT_SELECT);
     }
 }

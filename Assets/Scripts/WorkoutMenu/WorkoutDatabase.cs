@@ -33,12 +33,12 @@ namespace WorkoutMenu
                 workoutButton.SetButton(workout._WorkoutName, workout);
             }
             
-            EventManager.StartListening("WORKOUT_MENU_POPUP",SetSelectedObject);
+            EventManager.StartListening(EventConstants.CHECK_WORKOUT,SetSelectedObject);
         }
 
         private void SetSelectedObject()
         {
-            selectedWorkoutObject = (WorkoutObject) EventManager.GetData("WORKOUT_MENU_POPUP");
+            selectedWorkoutObject = (WorkoutObject) EventManager.GetData(EventConstants.CHECK_WORKOUT);
         }
 
 

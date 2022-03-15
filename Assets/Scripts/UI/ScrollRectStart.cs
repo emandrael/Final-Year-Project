@@ -12,12 +12,12 @@ namespace UI
         private void Start()
         {
             _scrollRect = GetComponent<ScrollRect>();
-            EventManager.StartListening("SCROLL_VIEW_RESET",SetScrollViewToTop);
+            EventManager.StartListening(EventConstants.SCROLL_VIEW_RESET,SetScrollViewToTop);
         }
 
         private void OnDisable()
         {
-            EventManager.StopListening("SCROLL_VIEW_RESET",SetScrollViewToTop);
+            EventManager.StopListening(EventConstants.SCROLL_VIEW_RESET,SetScrollViewToTop);
         }
         
 

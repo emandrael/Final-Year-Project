@@ -20,18 +20,18 @@ namespace WorkoutMenu.WorkoutPopUpMenu
         // Start is called before the first frame update
         void OnEnable()
         {
-            EventManager.StartListening("WORKOUT_MENU_POPUP",SetViewedWorkout);
+            EventManager.StartListening(EventConstants.CHECK_WORKOUT,SetViewedWorkout);
         }
 
         private void OnDisable()
         {
-            EventManager.StopListening("WORKOUT_MENU_POPUP",SetViewedWorkout);
+            EventManager.StopListening(EventConstants.CHECK_WORKOUT,SetViewedWorkout);
         }
 
         private void SetViewedWorkout()
         {
             _currentlyViewedWorkoutObject =
-                (WorkoutObject) EventManager.GetData("WORKOUT_MENU_POPUP");
+                (WorkoutObject) EventManager.GetData(EventConstants.CHECK_WORKOUT);
             
             workoutName.text = _currentlyViewedWorkoutObject._WorkoutName;
             
@@ -57,14 +57,7 @@ namespace WorkoutMenu.WorkoutPopUpMenu
 
         public void OnSelectWorkoutPressed()
         {
-            EventManager.EmitEventData("SELECT_WORKOUT",_currentlyViewedWorkoutObject);
-        }
-    
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            EventManager.EmitEventData(EventConstants.WORKOUT_SELECT,_currentlyViewedWorkoutObject);
         }
     }
 }
